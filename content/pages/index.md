@@ -65,5 +65,70 @@ card1:
             bg: base-verde-200
         light:
             bg: base-verde-200
+
+
+card2:
+    title: Seguros Banamex
+    description: Lista en minutos. Abre tu cuenta
+    cta:
+        label: Descubre Switch
+        link: /tarjetas/switch
+    image: 
+        src:
+            desktop: https://picsum.photos/400
+        alt: la imagen de la card 1
+    ui:
+        dark:
+            bg: white
+        light:
+            bg: white
+
+card3:
+    title: Seguros Banamex
+    description: Lista en minutos. Abre tu cuenta
+    cta:
+        label: Descubre Switch
+        link: /tarjetas/switch
+    image: 
+        src:
+            desktop: https://picsum.photos/600/400
+        alt: la imagen de la card 1
+    ui:
+        dark:
+            bg: white
+        light:
+            bg: white
+
+card4:
+    title: Seguros Banamex
+    description: Lista en minutos. Abre tu cuenta
+    cta:
+        label: Descubre Switch
+        link: /tarjetas/switch
+    image: 
+        src:
+            desktop: https://picsum.photos/400
+        alt: la imagen de la card 1
+    ui:
+        dark:
+            bg: white
+        light:
+            bg: white
+
+card5:
+    title: Seguros Banamex 2
+    description: Lista en minutos. Abre tu cuenta
+    cta:
+        label: Descubre Switch
+        link: /tarjetas/switch
+    image: 
+        src:
+            desktop: https://picsum.photos/400
+        alt: la imagen de la card 1
+    ui:
+        dark:
+            bg: white
+        light:
+            bg: white
 ---
 ::

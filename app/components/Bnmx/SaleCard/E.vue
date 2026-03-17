@@ -8,7 +8,6 @@ const props = defineProps<{
         label: string
         link: string
     }
-    image: PictureProps
     ui: {
         light: {
             bg: string
@@ -37,11 +36,10 @@ const handleExpand = (e: Event) => {
 </script>
 
 <template>
-    <NuxtLink :to="cta?.link || '#'" class="flex relative group" :class="isOpen ? 'pr-[40px]' : ''">
-        <div :style="cardBgStyle" :class="isOpen ? '' : 'rounded-tr-3xl'" class="flex flex-col gap-2 justify-center text-primary-blue rounded-b-3xl rounded-tl-3xl sm:rounded-r-none p-4 sm:p-8 sm:gap-4 w-full sm:w-3/5 flex-shrink-0 bg-[var(--card-bg-light)] dark:bg-[var(--card-bg-dark)] relative after:hidden sm:after:flex after:absolute after:left-full after:top-0 after:rounded-br-xl after:bg-[var(--card-bg-light)] dark:after:bg-[var(--card-bg-dark)] after:flex-shrink-0 after:h-8/12 after:w-1/8">
+    <NuxtLink :to="cta?.link || '#'" :style="cardBgStyle" class="flex flex-col relative group gap-2 justify-center text-primary-blue rounded-3xl sm:px-8 sm:gap-4 w-full bg-[var(--card-bg-light)] dark:bg-[var(--card-bg-dark)] relative">
             <h2 class="text-2xl sm:text-lg">{{ title }}</h2>
             <Transition name="fade">
-                <div class="flex flex-col gap-4" v-show="!isMobile ||isOpen">
+                <div class="flex flex-col gap-4" v-show="!isMobile || isOpen">
                     <p class="text-xl">{{ description }}</p>
                     <p class="flex items-center font-bold size-2 w-full">
                         {{ cta?.label }}
@@ -49,14 +47,9 @@ const handleExpand = (e: Event) => {
                     </p>
                 </div>
             </Transition>
-            <BnmxInvertedRadius color="var(--card-bg-dark)" class="top-8/12 left-full size-2 rotate-[90deg]" />
-            <button class="sm:hidden ml-auto absolute z-10" :class="isOpen ? 'bottom-16 -right-6' : 'bottom-2 right-2'" @click="handleExpand">
+            <button class="sm:hidden ml-auto absolute bottom-2 right-2 z-10" @click="handleExpand">
                 <UIcon :name="isOpen ? 'i-heroicons-minus' : 'i-heroicons-plus'" class="w-6 h-6" />
             </button>
-        </div>
-        <span :class="isOpen ? 'flex' : 'hidden'" class="w-[40px] h-2/3 rounded-r-3xl absolute top-0 right-0 sm:hidden bg-[var(--card-bg-light)] dark:bg-[var(--card-bg-dark)]" :style="cardBgStyle">
-        </span>
-        <BnmxPicture :image="image" class="rounded-r-3xl overflow-hidden hidden sm:flex" />
     </NuxtLink>
 </template>
 
