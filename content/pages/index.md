@@ -13,7 +13,7 @@ title: Welcome to Banamex
 description: Pasate a banamex ahora
 bg: 
     light: white
-    dark: zinc-800
+    dark: var(--color-primary-blue)
 cta:
     label: Conoce mas
     link: /tarjetas
@@ -45,4 +45,25 @@ cta:
 ---
 
 Tu nueva tarjeta esta mas cerca que tu crush
+::
+
+::ProductShowcase
+---
+deskBg: base-gris-200
+card1:
+    title: Cuenta Switch Banamex
+    description: Lista en minutos. Abre tu cuenta
+    cta:
+        label: Descubre Switch
+        link: /tarjetas/switch
+    image: 
+        src:
+            desktop: https://picsum.photos/400
+        alt: la imagen de la card 1
+    ui:
+        dark:
+            bg: base-verde-200
+        light:
+            bg: base-verde-200
+---
 ::

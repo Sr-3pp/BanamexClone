@@ -1,6 +1,14 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
+@import './theme.css';
+@import './fonts.css';
 
-@theme light{
+@theme {
     --ui-primary: #FF1B44;
+    --default-font-family: Banamex-text;
+    --font-banamex-display: Banamex-display;
+}
+
+:root{
+    --ui-container: 90rem;
 }

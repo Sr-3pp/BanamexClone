@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Banamex-display';
+    src: url('/fonts/banamex-display-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Banamex-text';
+    src: url('/fonts/banamex-text-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Banamex-text';
+    src: url('/fonts/banamex-text-semi-bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Banamex-text';
+    src: url('/fonts/banamex-text-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Banamex-micro';
+    src: url('/fonts/banamex-micro-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Banamex-micro';
+    src: url('/fonts/banamex-micro-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

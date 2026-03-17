@@ -1,10 +1,11 @@
 import button from "@/assets/ui/button";
+import container from "@/assets/ui/container";
+import pageGrid from "@/assets/ui/grid";
 
 export default defineAppConfig({
   ui: {
-    pageGrid: {
-      base: "relative grid grid-cols-1 sm:grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-4",
-    },
-    button
+    pageGrid,
+    button,
+    container
   },
 });

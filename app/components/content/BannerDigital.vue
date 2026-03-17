@@ -39,18 +39,13 @@ const componentStyle = computed(() => ({
                 <BnmxInvertedRadius color="var(--desk-bg)" class="rotate-90 left-full top-0 w-4 h-4" />
                 <BnmxInvertedRadius color="var(--desk-bg)" class="rotate-90 left-0 top-full w-4 h-4" />
             </div>
-            <article class="bg-[var(--component-bg)] p-4 sm:p-8 rounded-4xl">
-                <div class="flex items-center">
-                    <div class="w-full sm:w-1/2 text-[var(--color)] text-xl">
+            <article class="bg-[var(--component-bg)] pb-0 sm:pb-8 p-8 rounded-4xl">
+                <div class="flex items-center flex-col sm:flex-row gap-8 sm:gap-6">
+                    <div class="w-full sm:w-1/2 text-[var(--color)] text-xl pt-8 sm:pt-0">
                         <slot />
-                        <BnmxButton :color="cta.color" :label="cta.label" :to="cta.link" />
+                        <BnmxButton :color="cta.color" :label="cta.label" :to="cta.link" class="w-full sm:w-auto" />
                     </div>
-                    <picture class="w-1/3 flex-shrink-0 ml-auto -mt-16">
-                        <source :srcset="image.src.desktop" media="(min-width: 1024px)" />
-                        <source :srcset="image.src.portrait" media="(min-width: 768px)" />
-                        <source :srcset="image.src.mobile" media="(min-width: 320px)" />
-                        <NuxtImg :src="image.src.desktop" :alt="image.alt" />
-                    </picture>
+                    <BnmxPicture class="w-2/3 sm:w-1/3 flex-shrink-0 mx-auto sm:mr-0 -mb-4 sm:mb-0 sm:-mt-16" :image="image" />
                 </div>
             </article>
         </UContainer>

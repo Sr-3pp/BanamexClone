@@ -1,6 +1,8 @@
 import tailwindColors from "tailwindcss/colors"
 
 const SPECIAL_TOKENS = new Set(["transparent", "current", "inherit", "white", "black"])
+const THEME_TOKEN_PREFIX = "color-"
+const THEME_COLOR_PREFIX = "--color-"
 
 export const DEFAULT_TAILWIND_COLOR_FALLBACK = "#ffffff"
 
@@ -16,6 +18,18 @@ export function resolveTailwindColor(
         return token
     }
 
+    if (token.startsWith("var(")) {
+        return token
+    }
+
+    if (token.startsWith(THEME_TOKEN_PREFIX)) {
+        return `var(--${token})`
+    }
+
+    if (token.startsWith(THEME_COLOR_PREFIX)) {
+        return `var(${token})`
+    }
+
     const [paletteName, shade] = token.split("-")
 
     if (!paletteName || !shade) {
@@ -25,7 +39,7 @@ export function resolveTailwindColor(
     const palette = tailwindColors[paletteName as keyof typeof tailwindColors]
 
     if (!palette || typeof palette !== "object" || !(shade in palette)) {
-        return token
+        return `var(${THEME_COLOR_PREFIX}${token})`
     }
 
     return palette[shade as keyof typeof palette]

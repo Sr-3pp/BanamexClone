@@ -5,7 +5,7 @@ export default {
     variants: {
         size: {
             lg: {
-                base: "py-3 max-w-[250px]"
+                base: "py-4 sm:max-w-[250px] text-2xl"
             }
         },
     },
