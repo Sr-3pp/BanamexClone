@@ -13,7 +13,7 @@ title: Welcome to Banamex
 description: Pasate a banamex ahora
 bg: 
     light: white
-    dark: var(--color-primary-blue)
+    dark: primary-blue
 cta:
     label: Conoce mas
     link: /tarjetas
@@ -130,5 +130,67 @@ card5:
             bg: white
         light:
             bg: white
+---
+::
+
+::HighlightCarousel
+---
+items:
+    - title: test 1
+      description: la description
+      cta:
+          label: Registrate
+          link: /tarjetas
+          color: primary
+      image:
+          src:
+              desktop: /img/home/desktop/highlightcard.jpg
+          alt: Banner digital abanico
+      ui:
+          dark:
+              bg: base-verde-300
+              color: primary-blue
+          light:
+              bg: primary-blue
+              color: white
+    - title: test 2
+      description: la description
+      cta:
+          label: Registrate
+          link: /tarjetas
+          color: primary
+      image:
+          src:
+              desktop: /img/home/desktop/highlightcard.jpg
+          alt: Banner digital abanico
+      ui:
+          dark:
+              bg: base-verde-300
+              color: primary-blue
+          light:
+              bg: primary-blue
+              color: white
+    - title: test 3
+      description: la description
+      cta:
+          label: Registrate
+          link: /tarjetas
+          color: primary
+      image:
+          src:
+              desktop: /img/home/desktop/highlightcard.jpg
+          alt: Banner digital abanico
+      ui:
+          dark:
+              bg: base-verde-300
+              color: primary-blue
+          light:
+              bg: primary-blue
+              color: white
+ui:
+    dark:
+        bg: white
+    light:
+        bg: blue
 ---
 ::
