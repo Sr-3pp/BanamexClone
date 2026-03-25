@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type PictureProps from '~~/types/picture';
+import type PictureProps from '~~/types/components/picture';
 
 const props = defineProps<{
     deskBg: string

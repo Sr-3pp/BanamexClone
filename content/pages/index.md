@@ -34,10 +34,17 @@ image:
     src:
         desktop: /img/home/desktop/banner-digital.png
     alt: Banner digital abanico
-productColor: gray-800
-deskBg: white
-bg: gray-800
-color: white
+ui:
+    dark:
+        bg: gray-800
+        color: white
+        deskBg: white
+        productColor: gray-800
+    light:
+        bg: gray-800
+        color: white
+        deskBg: white
+        productColor: gray-800
 cta:
     color: primary
     label: Conocer mas

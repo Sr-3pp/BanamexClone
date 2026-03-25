@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type PictureProps from "~~/types/picture"
+import type UiTheme from '~~/types/ui';
+
 const props = defineProps<{
     title: string
     description: string
@@ -8,16 +9,7 @@ const props = defineProps<{
         label: string
         link: string
     }
-    ui: {
-        light: {
-            bg: string
-            color: string
-        }
-        dark: {
-            bg: string
-            color: string
-        }
-    }
+    ui: UiTheme
 }>()
 
 const cardBgStyle = computed(() => ({

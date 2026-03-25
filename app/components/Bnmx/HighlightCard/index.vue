@@ -1,36 +1,7 @@
 <script lang="ts" setup>
-import type PictureProps from '~~/types/picture'
+import type PictureProps from '~~/types/components/picture'
+import type UiTheme from '~~/types/ui'
 
-type CardTheme = {
-    light: {
-        bg: string
-        color: string
-    }
-    dark: {
-        bg: string
-        color: string
-    }
-}
-
-const DEFAULT_IMAGE: PictureProps = {
-    src: {
-        desktop: '',
-        portrait: '',
-        mobile: '',
-    },
-    alt: '',
-}
-
-const DEFAULT_THEME: CardTheme = {
-    light: {
-        bg: 'white',
-        color: 'black',
-    },
-    dark: {
-        bg: 'black',
-        color: 'white',
-    },
-}
 
 const props = defineProps<{
     image?: Partial<PictureProps>
@@ -41,26 +12,26 @@ const props = defineProps<{
         label: string
         link: string
     }
-    ui?: Partial<CardTheme>
+    ui?: UiTheme
 }>()
 
 const cardImage = computed<PictureProps>(() => ({
     src: {
-        desktop: props.image?.src?.desktop ?? DEFAULT_IMAGE.src.desktop,
-        portrait: props.image?.src?.portrait ?? props.image?.src?.desktop ?? DEFAULT_IMAGE.src.portrait,
-        mobile: props.image?.src?.mobile ?? props.image?.src?.desktop ?? DEFAULT_IMAGE.src.mobile,
+        desktop: props.image?.src?.desktop || '',
+        portrait: props.image?.src?.portrait || '',
+        mobile: props.image?.src?.mobile || '',
     },
-    alt: props.image?.alt ?? DEFAULT_IMAGE.alt,
+    alt: props.image?.alt || '',
 }))
 
-const theme = computed<CardTheme>(() => ({
+const theme = computed<UiTheme>(() => ({
     light: {
-        bg: props.ui?.light?.bg ?? DEFAULT_THEME.light.bg,
-        color: props.ui?.light?.color ?? DEFAULT_THEME.light.color,
+        bg: props.ui?.light?.bg || '',
+        color: props.ui?.light?.color || '',
     },
     dark: {
-        bg: props.ui?.dark?.bg ?? DEFAULT_THEME.dark.bg,
-        color: props.ui?.dark?.color ?? DEFAULT_THEME.dark.color,
+        bg: props.ui?.dark?.bg || '',
+        color: props.ui?.dark?.color || '',
     },
 }))
 

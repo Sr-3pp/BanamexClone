@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { resolveTailwindColor } from "@/utils/tailwindColor"
-import type PictureProps from "~~/types/picture";
+import type PictureProps from "~~/types/components/picture";
 
 const props = defineProps<{
     title: string

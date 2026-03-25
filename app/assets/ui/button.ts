@@ -13,7 +13,7 @@ export default {
         {
             color: 'primary',
             variant: 'solid',
-            class: 'text-white font-bold'
+            class: 'text-white font-bold px-8 py-3'
         }
     ]
 }

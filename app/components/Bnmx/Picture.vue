@@ -1,13 +1,8 @@
 <script setup lang="ts">
+import type PictureProps from '~~/types/components/picture';
+
 defineProps<{
-    image: {
-        src: {
-            desktop: string
-            portrait: string
-            mobile: string
-        }
-        alt: string
-    }
+    image: PictureProps
 }>()
 </script>
 

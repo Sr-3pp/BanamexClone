@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type PictureProps from "~~/types/picture"
+import type PictureProps from "~~/types/components/picture"
+import type UiTheme from "~~/types/ui";
 const props = defineProps<{
     title: string
     description: string
@@ -9,16 +10,7 @@ const props = defineProps<{
         link: string
     }
     image: PictureProps
-    ui: {
-        light: {
-            bg: string
-            color: string
-        }
-        dark: {
-            bg: string
-            color: string
-        }
-    }
+    ui: UiTheme
 }>()
 
 const cardBgStyle = computed(() => ({
@@ -40,6 +32,12 @@ const handleExpand = (e: Event) => {
     <NuxtLink :to="cta?.link || '#'" class="flex flex-col relative group rounded-3xl overflow-hidden" :class="isOpen ? 'pr-[40px]' : ''">
         <BnmxPicture :image="image" class="hidden sm:flex w-full" />
         <div :style="cardBgStyle" class="flex flex-col gap-2 justify-center text-primary-blue p-4 sm:p-8 sm:gap-4 w-full flex-shrink-0 bg-[var(--card-bg-light)] dark:bg-[var(--card-bg-dark)] relative">
+            <div class="absolute bottom-full left-0 w-1/2 p-3 bg-[var(--card-bg-dark)] dark:bg-[var(--card-bg-light)] flex items-center justify-end rounded-tr-3xl">
+                <UBadge color="primary" size="lg">
+                    ovehi
+                </UBadge>
+                <BnmxInvertedRadius color="var(--card-bg-light)" class="size-4 absolute left-full bottom-0" />
+            </div>
             <h2 class="text-2xl sm:text-lg">{{ title }}</h2>
             <Transition name="fade">
                 <div class="flex flex-col gap-4" v-show="!isMobile || isOpen">

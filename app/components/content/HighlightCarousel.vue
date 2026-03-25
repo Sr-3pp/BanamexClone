@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type PictureProps from '~~/types/picture'
+import type PictureProps from '~~/types/components/picture'
 
 interface SlideTheme {
     light: {
@@ -97,7 +97,7 @@ const carouselStyle = computed(() => ({
             arrows
             :ui="{
                 root: 'flex flex-row-reverse gap-8',
-                container: 'gap-4 sm:gap-6',
+                container: 'gap-2',
                 item: 'basis-[calc(100%_-_2rem)] sm:basis-[calc(100%_-_10rem)] lg:basis-[calc(50%_-_10rem)] flex-shrink-0',
                 arrows: 'static flex flex-col h-full justify-center gap-4',
                 prev: 'static translate-none',
